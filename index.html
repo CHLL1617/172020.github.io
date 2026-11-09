@@ -18,9 +18,9 @@ body{font-family:'ZCOOL XiaoWei',-apple-system,'PingFang SC','Microsoft YaHei',s
 
 header{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,rgba(255,236,183,.95),rgba(255,209,156,.92));border-bottom:2px solid rgba(210,150,70,.3)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 20px;height:60px}
-.logo{font-family:'Ma Shan Zheng',cursive;font-size:24px;color:#c96a30;letter-spacing:3px}
-.logo small{font-size:13px;color:#b07040;font-family:'ZCOOL XiaoWei',serif;margin-left:8px}
-nav a{margin-left:18px;font-size:15px;color:#8b6f47;position:relative;padding:4px 0;text-decoration:none;display:inline-block}
+.logo{font-family:'Ma Shan Zheng',cursive;font-size:22px;color:#c96a30;letter-spacing:3px}
+.logo small{font-size:12px;color:#b07040;font-family:'ZCOOL XiaoWei',serif;margin-left:6px}
+nav a{margin-left:14px;font-size:14px;color:#8b6f47;position:relative;padding:4px 0;text-decoration:none;display:inline-block}
 nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:#c96a30;transition:width .3s}
 nav a:hover,nav a.on{color:#c96a30}
 nav a:hover::after,nav a.on::after{width:100%}
@@ -49,11 +49,29 @@ nav a:hover::after,nav a.on::after{width:100%}
 .card .info .t{font-family:'Ma Shan Zheng',cursive;font-size:20px;color:#c96a30}
 .card .info .m{font-size:13px;color:#a08560;margin-top:4px}
 
+.age-cover{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-bottom:3px solid #f0dcc0;background:#f5ead8}
+.age-cover-ph{width:100%;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(255,200,130,.28),rgba(255,150,90,.12));color:#c96a30;font-size:26px;border-bottom:3px dashed #e8704a}
+.age-cover-ph small{font-family:'ZCOOL XiaoWei',serif;font-size:13px;color:#a08560;margin-top:6px}
+.age-body{padding:16px;text-align:center;background:linear-gradient(135deg,#fff5e6,#ffe8cc)}
+.age-body .cnt{font-size:13px;color:#a08560;margin-top:6px}
+.age-body .cv{font-size:12px;color:#b07040;margin-top:4px;font-style:italic}
+
+/* 首页「关于我」 */
+.about{margin:44px 0 10px;padding:28px;background:#fff;border-radius:20px;border:2px solid #f0dcc0;box-shadow:0 6px 20px rgba(200,150,80,.08);display:flex;gap:24px;align-items:flex-start}
+.about .ava{flex:0 0 120px;width:120px;height:120px;border-radius:50%;overflow:hidden;border:4px solid #ffd599;background:linear-gradient(135deg,#ffe4b8,#ffb366);display:flex;align-items:center;justify-content:center;font-size:52px;position:relative}
+.about .ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about h3{font-family:'Ma Shan Zheng',cursive;font-size:26px;color:#c96a30;margin-bottom:10px}
+.about p{font-size:15px;color:#6b5a48;margin-bottom:10px}
+.about .sign{text-align:right;color:#a08560;font-size:14px;font-style:italic;margin-top:6px}
+.about .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.about .tag{padding:6px 14px;border-radius:20px;background:linear-gradient(135deg,#fff5e6,#ffe8cc);color:#c96a30;font-size:13px;border:1px solid #ffd599}
+
 .hall-hd{display:flex;align-items:center;gap:14px;margin:36px 0 16px;padding:16px 20px;background:linear-gradient(135deg,rgba(255,220,170,.3),rgba(255,200,130,.2));border-radius:16px;border-left:5px solid #e8704a}
 .hall-hd h3{font-family:'Ma Shan Zheng',cursive;font-size:26px;color:#c96a30}
 .hall-hd span{color:#a08560;font-size:14px}
-.future{border:3px dashed #e8704a;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:3/4;background:linear-gradient(135deg,rgba(255,200,130,.15),rgba(255,150,90,.08));color:#c96a30;font-family:'Ma Shan Zheng',cursive;font-size:22px;text-align:center;padding:20px}
-.future small{font-family:'ZCOOL XiaoWei',serif;font-size:14px;color:#a08560;margin-top:8px}
+
+.future{border:3px dashed #e8704a;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:3/4;background:linear-gradient(135deg,rgba(255,200,130,.15),rgba(255,150,90,.08));color:#c96a30;font-family:'Ma Shan Zheng',cursive;font-size:20px;text-align:center;padding:20px}
+.future small{font-family:'ZCOOL XiaoWei',serif;font-size:13px;color:#a08560;margin-top:8px}
 
 .modal-ov{position:fixed;inset:0;background:rgba(60,30,10,.55);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:20px;z-index:200}
 .modal-ov[hidden]{display:none}
@@ -114,6 +132,10 @@ nav a{margin-left:10px;font-size:13px}
 .nav-links{display:none}
 .nav-links.open{display:flex;position:absolute;top:60px;right:0;left:0;background:rgba(255,236,183,.97);flex-direction:column;padding:16px;box-shadow:0 8px 24px rgba(200,150,80,.15);z-index:10}
 .nav-links.open a{margin:8px 0}
+.about{flex-direction:column;align-items:center;text-align:center;padding:22px}
+.about .ava{flex:0 0 110px;width:110px;height:110px}
+.about .tags{justify-content:center}
+.about .sign{text-align:center}
 }
 </style>
 </head>
@@ -139,7 +161,7 @@ nav a{margin-left:10px;font-size:13px}
 </header>
 
 <main class="main" id="app"></main>
-<footer>🌸 每一笔都是一个世界 · 私人分享 🌸</footer>
+<footer>🌸 每一笔都是一个世界 · 4岁到18岁的梦想足迹 🌸</footer>
 
 <div class="modal-ov" id="modal" hidden>
 <div class="modal-sh">
@@ -149,102 +171,244 @@ nav a{margin-left:10px;font-size:13px}
 </div>
 
 <script>
-var CFG={name:"小花画家",born:2016,
-intro:"她从三岁开始画画，把看到的世界用颜色讲出来。每幅画都是她心里的一座花园。",
-quote:"我画的是我梦里的仙人掌，它会开出彩虹色的花。",futureAge:18};
+/* ===== 基础配置 ===== */
+var CFG={
+  name:"小花画家",
+  born:2016,
+  intro:"从4岁稚拙涂鸦到10岁光影动漫，她用画笔记录了每一个成长瞬间。18岁的梦想预留，等待未来的自己。",
+  quote:"我画的是我眼里的世界，它每一天都不一样。",
+  futureAge:18,
+  about:{
+    avatar:"me.jpg",
+    emoji:"👧🎨",
+    tags:["🎨 画龄 6 年+","📚 小学在读","🦋 喜欢蝴蝶和动漫","✏️ 素描 & 彩铅"],
+    lines:[
+      "你好呀，欢迎来到我的花园美术馆！我是这里的小小画家，从 4 岁握着蜡笔乱涂乱画开始，就一直没放下画笔。",
+      "我喜欢把看到的东西都画下来：会开屏的孔雀、沙漠里的骆驼、街角的小店，还有妈妈最爱的那束花。后来我学会了画几何体和素描，才知道原来光影也是有形状的。",
+      "这几年我画了动漫人物、画了石膏、画了自行车的链条，也画了很多很多线条。每一幅画都是那一年的我，所以我把它们按年龄一间一间房间摆好了。",
+      "18 岁的那间展厅现在还空着，我留给了未来的自己——希望那时的我，依然觉得画画是件很快乐的事。"
+    ],
+    sign:"—— 10 岁的我，写在秋天"
+  }
+};
 
-var WORKS=[
-{id:1,title:"彩虹仙人掌",age:7,date:"2023-03-15",medium:"彩铅",size:"A4",img:"img1.jpg",
- quote:"仙人掌不是只有绿色的，它心里有彩虹。",
- note:"这幅画她用了五种颜色渐变，画了两节课。每一根小刺都认真地画了上去。"},
-{id:2,title:"我的奇妙世界",age:4,date:"2020-08-20",medium:"铅笔",size:"A4",img:"img2.jpg",
- quote:"这里有小人、有怪兽、还有我想象的大河。",
- note:"四岁时的涂鸦，纸上有水渍和折痕，但那是她第一次画出了「场景」。"},
-{id:3,title:"镜中的小湖",age:8,date:"2024-11-10",medium:"铅笔素描",size:"A4",img:"img3.jpg",
- quote:"我画了一个圆，像从望远镜看过去的风景。",
- note:"第一次尝试圆形构图和远近透视。远山、小路、房子、树影都安排得很有耐心。"},
-{id:4,title:"最好的朋友",age:8,date:"2025-02-14",medium:"彩铅",size:"A4",img:"img4.jpg",
- quote:"两只小鸟在亲亲，因为它们是好朋友。",
- note:"情人节那天画的。她说一黄一绿配在一起最好看，还认真画了每根羽毛。"},
-{id:5,title:"我的怪兽朋友们",age:6,date:"2022-10-05",medium:"铅笔素描",size:"A4",img:"img5.jpg",
- quote:"这些是我的怪兽朋友，有的凶有的可爱，但它们都很善良。",
- note:"一整张纸画满了各种角色，还有她写的台词和对话气泡。这是她最爱的「怪兽宇宙」。"}
-];
+/* ===== 作品映射表（按年龄分厅） ===== */
+var AGE_MAP={
+  "4":[4,11,39,54,60,61],
+  "5":[3,8,9,14,15,30,45],
+  "6":[1,5,6,16,18,47,57],
+  "7":[2,7,13,17,29,43,49,53,58,59],
+  "8":[10,27,31,34,40,41,44,46,48,51,55,56],
+  "9":[12,19,21,22,23,24,25,28,32,36,37,38,42,50],
+  "10":[20,26,33,35,52,62],
+  "18":[63]
+};
 
-var THEMES=[
-{title:"色彩的成长",desc:"从铅笔涂鸦到彩色渐变，看她的色彩怎么丰富起来。",ids:[2,1,4]},
-{title:"她的怪兽宇宙",desc:"从四岁的涂鸦到六岁的怪兽集合，想象力的轨迹。",ids:[2,5]}
-];
+/* ===== 首页年龄卡片封面配置 ===== */
+var COVERS={"4":11,"5":45,"6":6,"7":49,"8":44,"9":23,"10":52,"18":63};
 
+/* ===== 作品标题库 ===== */
+var TITLES={
+  1:"构图花卉", 2:"圆锥几何", 3:"古风宫灯", 4:"勤劳的蜜蜂", 5:"夜景构图",
+  6:"孔雀开屏", 7:"斑马", 8:"沙漠骆驼", 9:"快乐一家", 10:"树叶线稿",
+  11:"母亲节快乐", 12:"夜空繁星", 13:"小狐狸", 14:"猫头鹰", 15:"小黄鸡",
+  16:"红石榴", 17:"街边小店", 18:"草地小径", 19:"动漫少女", 20:"头骨素描",
+  21:"红发少女", 22:"五条悟(一)", 23:"五条悟(二)", 24:"红蝴蝶", 25:"黑白少女",
+  26:"繁复线稿", 27:"树影", 28:"太空人", 29:"黑白漫画", 30:"色彩爆发",
+  31:"枯树", 32:"人像速写", 33:"蓝色火焰", 34:"石膏几何", 35:"人物写生",
+  36:"人物素描", 37:"动漫头像", 38:"老虎", 39:"彩色小山", 40:"嘴唇素描",
+  41:"正方体", 42:"黑白盆栽", 43:"彩色房子", 44:"红石榴", 45:"Q版女孩",
+  46:"几何组合体", 47:"两只小鸟", 48:"几何体", 49:"彩色小店", 50:"花卉速写",
+  51:"鸡蛋几何", 52:"写实自行车", 53:"粉色玉兰花", 54:"圆形风景", 55:"荷花线描",
+  56:"长方体", 57:"彩虹仙人掌", 58:"紫色花朵", 59:"红花绿叶", 60:"瓶中花",
+  61:"荷塘清趣", 62:"预留大作 (NO.62)", 63:"18岁梦想预留 (NO.63)"
+};
+
+var AGE_DESC={
+  "4":"涂鸦萌芽期 · 用简单的线条和色块表达对世界的好奇",
+  "5":"卡通萌芽期 · 开始画有表情的小动物和卡通人物",
+  "6":"色彩叙事期 · 画面有了完整的场景和故事感",
+  "7":"场景写实期 · 花卉、静物、建筑，观察力大幅提升",
+  "8":"素描基础期 · 开始系统学习几何体和光影素描",
+  "9":"动漫进阶期 · 爱上二次元和人物速写，风格爆发",
+  "10":"技法成熟期 · 写实能力突出，细节精致",
+  "18":"梦想预留厅 · 留给18岁的自己"
+};
+
+/* ===== 工具函数 ===== */
+function getMedium(age){
+  var m={"4":"蜡笔/涂鸦","5":"蜡笔/彩铅","6":"彩铅/水彩","7":"彩铅/水彩","8":"铅笔素描","9":"铅笔/彩铅/动漫","10":"精细素描/写实","18":"无限可能"};
+  return m[age]||"彩铅";
+}
+
+function getQuote(id){
+  var q={1:"花朵也有自己的排列方式。",2:"老师说，先画好几何体，什么都难不倒我。",3:"我把古代的灯画了下来。",4:"小蜜蜂在采蜜，它好勤劳。",5:"晚上的天空，有好多故事。",
+    6:"孔雀的尾巴像一把大扇子。",7:"斑马的条纹画得我手都酸了。",8:"骆驼走在沙漠里，一定很热吧。",9:"我们一家人在一起最开心。",10:"树叶的脉络，每一条都不一样。",
+    11:"妈妈，节日快乐！",12:"星星在对我眨眼睛。",13:"小狐狸的眼睛亮晶晶的。",14:"猫头鹰晚上不睡觉，在看什么呢？",15:"小黄鸡圆滚滚的，好可爱。",
+    16:"石榴红红的，看着就想吃。",17:"这是我梦想中的小店。",18:"小路通往哪里呢？",19:"我喜欢的动漫角色。",20:"老师说画头骨能理解头部结构。",
+    21:"红头发的女孩，酷酷的。",22:"五条悟，我的最爱！",23:"再画一个五条悟，不同的角度。",24:"蝴蝶是花的朋友。",25:"黑白的世界也很美。",
+    26:"我画了好多好多线条，停不下来。",27:"树的影子比树本身更有意思。",28:"太空人要去哪里呢？",29:"我编了一个漫画故事。",30:"颜色爆炸了！",
+    31:"冬天的树，光秃秃的，但很有力量。",32:"我试着画人的表情。",33:"蓝色的火焰，冷的美。",34:"石膏像好难画，但我画出来了。",35:"看着真人画，和照片不一样。",
+    36:"人物素描需要耐心。",37:"动漫头像练习。",38:"老虎的皮毛一根一根画的。",39:"山是彩色的，因为梦是彩色的。",40:"嘴唇的形状好微妙。",
+    41:"正方体有六个面，我数过了。",42:"花盆里的植物，安静地长着。",43:"我画了一个小房子。",44:"红石榴，籽多饱满。",45:"Q版的女孩，头大大的。",
+    46:"好几个几何体放在一起。",47:"两只小鸟在说悄悄话。",48:"几何体的组合练习。",49:"街角的小店，好温馨。",50:"速写花卉，抓住最美的瞬间。",
+    51:"鸡蛋的曲面最难表现。",52:"自行车的链条我都画出来了！",53:"玉兰花开了，粉粉的。",54:"从圆形的窗户看出去。",55:"荷花的线条，干净又优雅。",
+    56:"长方体的透视，我终于明白了。",57:"仙人掌穿上了彩虹色的毛衣！",58:"紫色的花，画了一下午。",59:"红花配绿叶，永远看不够。",60:"瓶子里的花，安静的时光。",
+    61:"荷塘里的花，开了又谢，但画下来就永远不会谢了。"};
+  return q[id]||"我画的时候，感觉整个世界都安静了。";
+}
+
+/* ===== 自动生成作品数据 ===== */
+var WORKS=[];
+var allAges=["4","5","6","7","8","9","10","18"];
+
+for(var i=1;i<=63;i++){
+  var age=null;
+  for(var a=0;a<allAges.length;a++){
+    if(AGE_MAP[allAges[a]].indexOf(i)!==-1){age=allAges[a];break;}
+  }
+  if(!age)age="8";
+
+  var isPlaceHolder=(i>=62);
+  var yr=2020+parseInt(age,10);
+
+  WORKS.push({
+    id:i,
+    title:isPlaceHolder?TITLES[i]:(TITLES[i]||"作品 "+i),
+    age:age,
+    date:yr+"-06-01",
+    medium:isPlaceHolder?"待完成":getMedium(age),
+    size:"A4",
+    isPlaceHolder:isPlaceHolder,
+    img:isPlaceHolder?null:encodeURI("img ("+i+").jpg"),
+    quote:isPlaceHolder?"虚位以待，精彩继续...":getQuote(i),
+    note:isPlaceHolder?"等待小花画家上传新作品...":"这是她在 "+age+" 岁时的用心之作。"
+  });
+}
+
+/* ===== 通用函数 ===== */
 function makePh(w){
-  var cs=[["#ffe4b8","#e8704a"],["#d8e6d0","#6f9c77"],["#d6e4f0","#5b87b8"],["#f0e0d8","#a86f57"],["#e8d8f0","#8a6fc9"]];
-  var c=cs[(w.id-1)%cs.length];
-  var t=w.title.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-  var s="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 800' width='600' height='800'>"+
+  if(w && w.isPlaceHolder){
+    var s1="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 800' width='600' height='800'>"+
+      "<rect width='600' height='800' fill='rgba(255,200,130,.2)' rx='16'/>"+
+      "<text x='300' y='370' font-size='36' text-anchor='middle' fill='#e8704a' font-family='serif'>"+(w.age==="18"?"18岁的我":"虚位以待")+"</text>"+
+      "<text x='300' y='420' font-size='20' text-anchor='middle' fill='#a08560' font-family='serif'>等待新作品上传</text></svg>";
+    return "data:image/svg+xml;charset=utf-8,"+s1;
+  }
+  var colors={
+    "4":["#ffe4b8","#f09050"],"5":["#ffd6a0","#e8704a"],
+    "6":["#d8e6d0","#6f9c77"],"7":["#c5e0b4","#4caf50"],
+    "8":["#d6e4f0","#5b87b8"],"9":["#c8b8e0","#8a6fc9"],
+    "10":["#e8d8f0","#7b5ea7"],"18":["#fff0f0","#d4603a"]
+  };
+  var c=colors[(w&&w.age)||"8"]||["#d6e4f0","#5b87b8"];
+  var t=((w&&w.title)||"作品").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  var s2="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 800' width='600' height='800'>"+
     "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>"+
     "<stop offset='0' stop-color='"+c[0]+"'/>"+
     "<stop offset='1' stop-color='"+c[1]+"'/>"+
     "</linearGradient></defs>"+
     "<rect width='600' height='800' fill='url(#g)' rx='16'/>"+
-    "<text x='300' y='380' font-size='42' text-anchor='middle' fill='#fff' font-family='serif'>"+t+"</text>"+
-    "<text x='300' y='440' font-size='22' text-anchor='middle' fill='rgba(255,255,255,.85)' font-family='serif'>"+w.age+" 岁 · "+w.medium+"</text>"+
-    "<text x='300' y='490' font-size='18' text-anchor='middle' fill='rgba(255,255,255,.6)' font-family='serif'>示例画布</text></svg>";
-  return "data:image/svg+xml;charset=utf-8,"+s;
+    "<text x='300' y='370' font-size='36' text-anchor='middle' fill='#fff' font-family='serif'>"+t+"</text>"+
+    "<text x='300' y='430' font-size='22' text-anchor='middle' fill='rgba(255,255,255,.85)' font-family='serif'>"+((w&&w.age)||"")+" 岁 · "+((w&&w.medium)||"")+"</text>"+
+    "<text x='300' y='475' font-size='18' text-anchor='middle' fill='rgba(255,255,255,.6)' font-family='serif'>图片加载失败</text></svg>";
+  return "data:image/svg+xml;charset=utf-8,"+s2;
 }
-function src(w){return w.img?w.img:makePh(w);}
+
+function src(w){return (w && w.img)?w.img:makePh(w);}
 function byId(id){for(var i=0;i<WORKS.length;i++){if(WORKS[i].id===id)return WORKS[i];}return null;}
 function pad(n){var s="00"+n;return s.substr(s.length-3);}
-function getAges(){var a=[];for(var i=0;i<WORKS.length;i++){if(a.indexOf(WORKS[i].age)===-1)a.push(WORKS[i].age);}return a.sort(function(x,y){return x-y;});}
 function countAge(a){var n=0;for(var i=0;i<WORKS.length;i++){if(WORKS[i].age===a)n++;}return n;}
-
 function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML;}
 
 function cardH(w){
+  if(!w)return "";
+  if(w.isPlaceHolder){
+    return "<div class='future' style='aspect-ratio:auto;min-height:280px;' onclick='alert(\""+esc(w.note)+"\")'>"+
+      "<div>✨ "+esc(w.title)+"</div><small>敬请期待</small></div>";
+  }
   return "<div class='card' onclick='openWork("+w.id+")'>"+
     "<img src='"+src(w)+"' alt='"+esc(w.title)+"' loading='lazy'>"+
     "<div class='info'><div class='t'>"+esc(w.title)+"</div>"+
-    "<div class='m'>NO."+pad(w.id)+" · "+w.age+"岁 · "+esc(w.medium)+"</div></div></div>";
+    "<div class='m'>NO."+pad(w.id)+" · "+w.age+" 岁</div></div></div>";
 }
 
-function rHome(){
-  var ages=getAges();
-  var h="<section class='hero'><div class='sun'></div>"+
-    "<h1>小花画家的花园美术馆</h1>"+
-    "<p>"+CFG.name+" · "+CFG.born+" 年至今 · 共 "+WORKS.length+" 件藏品</p>"+
-    "<p style='max-width:560px;margin:10px auto'>"+CFG.intro+"</p>"+
-    "<div class='qb'>"+CFG.quote+"</div></section>"+
-    "<h2 class='sec-title'>花园展厅导航</h2><div class='grid'>";
-  for(var i=0;i<ages.length;i++){
-    var a=ages[i];
-    h+="<div class='card' onclick=\"location.hash='#/halls/"+a+"'\">"+
-      "<div style='padding:28px;text-align:center;background:linear-gradient(135deg,#fff5e6,#ffe8cc)'>"+
-      "<div style='font-family:\"Ma Shan Zheng\",cursive;font-size:30px;color:#c96a30'>"+a+" 岁厅</div>"+
-      "<div class='info' style='padding:8px 0 0'><span class='m'>"+countAge(a)+" 件作品</span></div></div></div>";
+/* ===== 首页「关于我」 ===== */
+function rAbout(){
+  var a=CFG.about||{};
+  var ava=a.avatar
+    ?"<div class='ava'>"+(a.emoji||"🎨")+"<img src='"+a.avatar+"' alt='我的照片' onerror=\"this.style.display='none'\"></div>"
+    :"<div class='ava'>"+(a.emoji||"🎨")+"</div>";
+  var h="<section class='about'>"+ava+"<div>";
+  h+="<h3>关于我 🌸</h3>";
+  var lines=a.lines||[];
+  for(var i=0;i<lines.length;i++){h+="<p>"+esc(lines[i])+"</p>";}
+  var tags=a.tags||[];
+  if(tags.length){
+    h+="<div class='tags'>";
+    for(var j=0;j<tags.length;j++){h+="<span class='tag'>"+esc(tags[j])+"</span>";}
+    h+="</div>";
   }
-  h+="<div class='future'><div>"+CFG.futureAge+" 岁的我</div><small>待完成 · 花园还会长大</small></div></div>";
+  if(a.sign)h+="<div class='sign'>"+esc(a.sign)+"</div>";
+  h+="</div></section>";
   return h;
 }
 
+/* ===== 首页 ===== */
+function rHome(){
+  var h="<section class='hero'><div class='sun'></div>"+
+    "<h1>小花画家的花园美术馆</h1>"+
+    "<p>"+CFG.name+" · 4岁到10岁 · 共 "+WORKS.length+" 件藏品（含预留）</p>"+
+    "<p style='max-width:560px;margin:10px auto'>"+CFG.intro+"</p>"+
+    "<div class='qb'>"+CFG.quote+"</div></section>"+
+    "<h2 class='sec-title'>逐年展厅导航</h2><div class='grid'>";
+
+  for(var i=0;i<allAges.length;i++){
+    var a=allAges[i];
+    var coverId=COVERS[a];
+    var cw=coverId?byId(coverId):null;
+    var coverHtml;
+
+    if(cw && !cw.isPlaceHolder){
+      coverHtml="<img class='age-cover' src='"+src(cw)+"' alt='"+esc(cw.title)+"' loading='lazy'>"+
+        "<div class='age-body'><div style='font-family:\"Ma Shan Zheng\",cursive;font-size:30px;color:#c96a30'>"+a+" 岁厅</div>"+
+        "<div class='cnt'>"+countAge(a)+" 件作品</div>"+
+        "<div class='cv'>封面：《"+esc(cw.title)+"》</div></div>";
+    }else{
+      coverHtml="<div class='age-cover-ph'>✨<small>预留中</small></div>"+
+        "<div class='age-body'><div style='font-family:\"Ma Shan Zheng\",cursive;font-size:30px;color:#c96a30'>"+a+" 岁厅</div>"+
+        "<div class='cnt'>"+countAge(a)+" 件作品 · 等待未来的大作</div>"+
+        "<div class='cv'>封面：虚位以待</div></div>";
+    }
+
+    h+="<div class='card' onclick=\"location.hash='#/halls/"+a+"'\">"+coverHtml+"</div>";
+  }
+  h+="</div>";
+  h+=rAbout();
+  return h;
+}
+
+/* ===== 展厅 ===== */
 function rHalls(age){
-  var ages=getAges();
-  var h="<h2 class='sec-title'>花园展厅 · 按年分厅</h2>";
-  for(var i=0;i<ages.length;i++){
-    var a=ages[i];
-    if(age&&String(a)!==String(age))continue;
+  var h="<h2 class='sec-title'>花园展厅 · 按年龄分厅</h2>";
+  for(var i=0;i<allAges.length;i++){
+    var a=allAges[i];
+    if(age&&age!==a)continue;
     var list=[];for(var j=0;j<WORKS.length;j++){if(WORKS[j].age===a)list.push(WORKS[j]);}
-    h+="<div class='hall-hd'><h3>"+a+" 岁厅 🌸</h3><span>"+list.length+" 件作品</span></div><div class='grid'>";
+    h+="<div class='hall-hd'><h3>"+a+" 岁厅 🌸</h3><span>"+countAge(a)+" 件作品 · "+AGE_DESC[a]+"</span></div><div class='grid'>";
     for(var k=0;k<list.length;k++){h+=cardH(list[k]);}
     h+="</div>";
   }
   return h;
 }
 
+/* ===== 作品弹窗 ===== */
 function openWork(id){
   var w=byId(id);if(!w)return;
   var h="<img src='"+src(w)+"' alt='"+esc(w.title)+"'>";
   h+="<div class='meta'><span><b>"+esc(w.title)+"</b></span>";
-  h+="<span>NO."+pad(w.id)+"</span><span>"+w.date+"</span><span>"+w.age+" 岁</span>";
-  h+="<span>"+esc(w.medium)+"</span>"+(w.size?"<span>"+w.size+"</span>":"")+"</div>";
+  h+="<span>NO."+pad(w.id)+"</span><span>"+w.age+" 岁</span>";
+  h+="<span>"+esc(w.medium)+"</span><span>"+w.date+"</span></div>";
   h+="<div class='qb2'>"+esc(w.quote)+"<div style='color:#a08560;font-size:14px;margin-top:8px;font-family:\"ZCOOL XiaoWei\",serif'>—— 她自己说的</div></div>";
   if(w.note)h+="<div class='note'><b>🌿 家长注脚：</b>"+esc(w.note)+"</div>";
   h+="<button class='btn' onclick='printCard("+w.id+")'>🖼 保存作品卡</button>";
@@ -274,6 +438,13 @@ function printCard(id){
   setTimeout(function(){pw.print();},500);
 }
 
+/* ===== 时光墙 ===== */
+var THEMES=[
+  {title:"从涂鸦到写实：一年年的蜕变",desc:"从4岁的简单涂鸦到10岁的精细写实，看她的手和心一起长大。",ids:[11,15,13,57,53,41,22,52]},
+  {title:"她的动漫宇宙",desc:"从小黄鸡到五条悟，从动物卡通到精细动漫角色。",ids:[15,29,22,21]},
+  {title:"素描的力量",desc:"几何体→静物→石膏→人物，扎实的基本功之路。",ids:[41,51,34,20,36]}
+];
+
 function rThemes(){
   var h="<h2 class='sec-title'>时光对照墙</h2>";
   for(var i=0;i<THEMES.length;i++){
@@ -289,17 +460,18 @@ function rThemes(){
   return h;
 }
 
+/* ===== 猜年龄游戏 ===== */
 var GS={cur:null,right:0,total:0};
 function rGame(){
-  var pool=[];for(var i=0;i<WORKS.length;i++)pool.push(WORKS[i]);
+  var pool=[];for(var i=0;i<WORKS.length;i++)if(!WORKS[i].isPlaceHolder)pool.push(WORKS[i]);
   GS.cur=pool[Math.floor(Math.random()*pool.length)];
-  var ages=getAges();
   var h="<h2 class='sec-title'>猜猜她几岁画的 🦋</h2>"+
     "<div class='game-area'>"+
     "<img src='"+src(GS.cur)+"' alt='"+esc(GS.cur.title)+"'>"+
     "<div class='q'>这幅《"+esc(GS.cur.title)+"》是她几岁时画的？</div>"+
     "<div class='opts' id='opts'>";
-  for(var i=0;i<ages.length;i++)h+="<span class='opt' onclick='guess("+ages[i]+",this)'>"+ages[i]+" 岁</span>";
+  var guessAges=["4","5","6","7","8","9","10"];
+  for(var i=0;i<guessAges.length;i++)h+="<span class='opt' onclick='guess(\""+guessAges[i]+"\",this)'>"+guessAges[i]+" 岁</span>";
   h+="</div><div class='gmsg' id='gmsg'></div>"+
     "<button class='btn gh' onclick='rGameInner()' style='margin-top:10px'>换一幅</button>"+
     "<div class='stats' style='margin-top:10px'>已答 "+GS.total+" 题，答对 "+GS.right+" 题</div></div>";
@@ -313,19 +485,18 @@ function guess(age,el){
   var opts=document.querySelectorAll("#opts .opt");
   for(var i=0;i<opts.length;i++){
     opts[i].style.pointerEvents="none";
-    var v=parseInt(opts[i].textContent);
-    if(v===GS.cur.age)opts[i].classList.add("ok");
-    else if(v===age&&!ok)opts[i].classList.add("no");
+    if(opts[i].textContent===GS.cur.age+" 岁")opts[i].classList.add("ok");
+    else if(opts[i].textContent===age+" 岁"&&!ok)opts[i].classList.add("no");
   }
 }
 function rGameInner(){
-  var pool=[];for(var i=0;i<WORKS.length;i++)pool.push(WORKS[i]);
+  var pool=[];for(var i=0;i<WORKS.length;i++)if(!WORKS[i].isPlaceHolder)pool.push(WORKS[i]);
   GS.cur=pool[Math.floor(Math.random()*pool.length)];
-  var ages=getAges();
+  var guessAges=["4","5","6","7","8","9","10"];
   var h="<img src='"+src(GS.cur)+"' alt='"+esc(GS.cur.title)+"' style='width:100%;border-radius:16px;border:4px solid #f0dcc0'>"+
     "<div class='q'>这幅《"+esc(GS.cur.title)+"》是她几岁时画的？</div>"+
     "<div class='opts' id='opts'>";
-  for(var i=0;i<ages.length;i++)h+="<span class='opt' onclick='guess("+ages[i]+",this)'>"+ages[i]+" 岁</span>";
+  for(var i=0;i<guessAges.length;i++)h+="<span class='opt' onclick='guess(\""+guessAges[i]+"\",this)'>"+guessAges[i]+" 岁</span>";
   h+="</div><div class='gmsg' id='gmsg'></div>"+
     "<button class='btn gh' onclick='rGameInner()' style='margin-top:10px'>换一幅</button>"+
     "<div class='stats' style='margin-top:10px'>已答 "+GS.total+" 题，答对 "+GS.right+" 题</div>";
@@ -333,6 +504,7 @@ function rGameInner(){
   if(area)area.innerHTML=h;
 }
 
+/* ===== 留言本 ===== */
 var MK="hy_gb";
 function loadMsg(){try{return JSON.parse(localStorage.getItem(MK)||"[]");}catch(e){return[];}}
 function rBook(){
@@ -372,18 +544,21 @@ function exportMsg(){
 }
 function p2(n){return n<10?"0"+n:""+n;}
 
+/* ===== 藏品目录 ===== */
 function rIndex(){
-  var sorted=WORKS.slice().sort(function(a,b){return a.date.localeCompare(b.date);});
+  var sorted=WORKS.slice().sort(function(a,b){return a.id-b.id;});
   var h="<h2 class='sec-title'>藏品目录 📖</h2>"+
-    "<table class='idx-tb'><tr><th>编号</th><th>标题</th><th>年龄</th><th>日期</th><th>媒介</th><th>尺寸</th></tr>";
+    "<table class='idx-tb'><tr><th>编号</th><th>标题</th><th>年龄</th><th>画种/媒介</th><th>日期</th><th>状态</th></tr>";
   for(var i=0;i<sorted.length;i++){
     var w=sorted[i];
+    var st=w.isPlaceHolder?"<span style='color:#a08560'>待上传</span>":"<span style='color:#4caf50'>已展出</span>";
     h+="<tr onclick='openWork("+w.id+")'><td>NO."+pad(w.id)+"</td><td>"+esc(w.title)+"</td>"+
-      "<td>"+w.age+" 岁</td><td>"+w.date+"</td><td>"+esc(w.medium)+"</td><td>"+(w.size||"-")+"</td></tr>";
+      "<td>"+w.age+" 岁</td><td>"+esc(w.medium)+"</td><td>"+w.date+"</td><td>"+st+"</td></tr>";
   }
   h+="</table>";return h;
 }
 
+/* ===== 路由 ===== */
 function go(p){var nv=document.getElementById("nv");if(nv)nv.classList.remove("open");}
 function render(){
   var hash=location.hash||"#/";
